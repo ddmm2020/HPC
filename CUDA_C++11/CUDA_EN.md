@@ -221,9 +221,7 @@ void compute_mean_kernel(
 
 Image centralization(Subtract the mean vector of the data from each image vector) :
 
-$$
-\bar{v}_{j}^{(i)}=v_{j}^{(i)}-u_{j}
-$$
+![img](https://github.com/ddmm2020/HPC/blob/main/imgs/math.png)
 
 Thinking from different data access methods, we have two parallel methods for centralized processing of images.
 
