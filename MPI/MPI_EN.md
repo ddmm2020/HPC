@@ -4,7 +4,7 @@ https://mpitutorial.com/tutorials/
 
 https://www.mpich.org/static/docs/latest/
 
-Bertil Schmidt <<Parallel Programming: Concepts and Practice>> 
+Bertil Schmidt 《Parallel Programming: Concepts and Practice》
 
 
 
@@ -139,7 +139,7 @@ int main(int argc, char * argv[]){
 
  Implementation of the communication process shown in the figure below
 
-![非阻塞通讯](..\imgs\non-blocking.png)
+![非阻塞通讯](https://github.com/ddmm2020/HPC/blob/main/imgs/non-blocking.png)
 
 ```
 // Blocking communication causes deadlock
