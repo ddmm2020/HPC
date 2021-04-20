@@ -65,7 +65,7 @@ int main(int argc, char * argv[]){
 
  Implementation of the communication process shown in the figure below
 
-![ping_pong](..\imgs\ping_pong.png)
+![ping_pong](https://github.com/ddmm2020/HPC/blob/main/imgs/ping_pong.png)
 
 ```
 #include "stdio.h"
