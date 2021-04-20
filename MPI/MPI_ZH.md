@@ -61,7 +61,7 @@ int main(int argc, char * argv[]){
 
 实现下图所示通讯流程
 
-![ping_pong](..\imgs\ping_pong.png)
+![ping_pong](https://github.com/ddmm2020/HPC/blob/main/imgs/ping_pong.png)
 
 ```
 #include "stdio.h"
@@ -135,7 +135,7 @@ int main(int argc, char * argv[]){
 
 实现如下通讯流程
 
-![非阻塞通讯](..\imgs\non-blocking.png)
+![非阻塞通讯](https://github.com/ddmm2020/HPC/blob/main/imgs/non-blocking.png)
 
 ```
 // 阻塞通讯造成死锁
