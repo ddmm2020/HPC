@@ -315,7 +315,7 @@ int main(int argc, char * argv[]){
 
 用于优化对某个通信域的所有进程进行广播
 
-![集群通信](..\imgs\bcast.png)
+![集群通信](https://github.com/ddmm2020/HPC/blob/main/imgs/bcast.png)
 
 example：计算0~n之间的素数个数
 
