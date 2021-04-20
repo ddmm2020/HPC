@@ -222,6 +222,7 @@ void compute_mean_kernel(
 Image centralization(Subtract the mean vector of the data from each image vector) :
 
 ![img](https://github.com/ddmm2020/HPC/blob/main/imgs/math.png)
+<img src="https://github.com/ddmm2020/HPC/blob/main/imgs/math.png" alt="image-20210419213817248" style="zoom:50%;" />
 
 Thinking from different data access methods, we have two parallel methods for centralized processing of images.
 
