@@ -321,7 +321,7 @@ int main(int argc, char * argv[]){
 
 Used to optimize the broadcast of all processes in a communication domain.
 
-![集群通信](..\imgs\bcast.png)
+![集群通信](https://github.com/ddmm2020/HPC/blob/main/imgs/bcast.png)
 
 example: Calculate the number of prime numbers between 0 and `n`
 
