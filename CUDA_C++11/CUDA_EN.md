@@ -11,7 +11,7 @@ https://github.com/JGU-HPC/parallelprogrammingbook
 #### CPU + GPU Heterogeneous computing
 
 ​		GPU is not an independent computing platform, and needs to work with the CPU. It can be regarded as a coprocessor of the CPU. When we talk about GPU parallel computing, we actually refer to a heterogeneous computing architecture based on CPU+GPU.  In a heterogeneous computing architecture, the GPU and the CPU are connected through a PCIe bus to work together. The location of the CPU is called the host, and the location of the GPU is called the device.
-   In GPU, there are a large number of stream processors, which can start many threads at the same time, which is especially suitable for data-parallel computing-intensive tasks. The CPU has fewer computing cores, but it can implement complex logic operations and is suitable for control-intensive tasks.
+​		In GPU, there are a large number of stream processors, which can start many threads at the same time, which is especially suitable for data-parallel computing-intensive tasks. The CPU has fewer computing cores, but it can implement complex logic operations and is suitable for control-intensive tasks.
 
 ![img](https://github.com/ddmm2020/HPC/blob/main/imgs/hc.png)
 
