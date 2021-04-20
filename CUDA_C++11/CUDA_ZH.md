@@ -14,11 +14,11 @@
 
 ​		GPU中，存在大量的流处理器，可以同时启动很多线程，特别适合数据并行的计算密集型任务。CPU运算核心较少，但可以实现复杂的逻辑运算，适合控制密集型任务。
 
-![img](..\imgs\hc.png)
+![img](https://github.com/ddmm2020/HPC/blob/main/imgs/hc.png)
 
   		主机内存(RAM)和设备显存(VRAM)是物理独分离的，通过PCIe总线进行数据传输。这就要求我们我们需要在两个平台上分别分配数据，然后管理他们之间的数据传输。
 
-![内存](..\imgs\meory.png)
+![内存](https://github.com/ddmm2020/HPC/blob/main/imgs/meory.png)
 
 ​		在C++代码中，可采用以下标识符来指定函数的运行位置。
 
@@ -53,7 +53,7 @@ kernel_fun<<< grid, block >>>(prams...);
 
 这部分代码定义了一个网格，包含$3\times2$个线程块，每个线程块又包含了$5\times3$个线程。层次关系如下图所示。
 
-![img](..\imgs\device_struct.png)
+![img](https://github.com/ddmm2020/HPC/blob/main/imgs/device_struct.png)
 
 
 
@@ -213,7 +213,7 @@ void compute_mean_kernel(
 
 图像数据中心化计算公式：
 
- 														$${\overline{v}_{j}^{(i)}} = {v_{j}^{(i)} - u_{j}}$$
+ 														<img src="https://latex.codecogs.com/svg.image?\bar{v}_{j}^{(i)}=v_{j}^{(i)}-u_{j}" title="\bar{v}_{j}^{(i)}=v_{j}^{(i)}-u_{j}" />
 
 从不同的数据访问方式来思考，我们有两种并行方法对图像进行中心化处理。
 
@@ -250,7 +250,7 @@ void compute_mean_kernel(
 
    运行结果：
 
-![image-20210419213817248](..\imgs\method1.png)
+![image-20210419213817248](https://github.com/ddmm2020/HPC/blob/main/imgs/method1.png)
 
 
 
@@ -278,7 +278,7 @@ void correction_kernel_ortho(
 
 运行结果：
 
-![image-20210419213703340](..\imgs\method2.png)
+![image-20210419213703340](https://github.com/ddmm2020/HPC/blob/main/imgs/method2.png)
 
 根据前人经验，通常情况下，本地线程标识符`threadIdx.x`的变化速度比`threadIdx.y`,`threadIdx.z`的变化都要快，因此，依赖threadIdx.x的变量应该总识操作索引方案中的最低有效位。
 
@@ -312,5 +312,5 @@ Data[threadIdx.x*matrix_width + threadIdx.y] = value;
 
 ​        每一个核函数中的线程都有自己的私有本地内存。每一个线程块有自己的共享内存，并对同一线程块中的所有线程都可见。所有的线程都可以访问全局内存。所有线程都能访问只读内存空间由：常量内存空间核纹理内存。**纹理内存**为各种数据布局提供了不同的寻址模式核滤波模式。
 
-<img src="..\imgs\memory_struct.jpg" alt="memory_struct" style="zoom: 200%;" />
+<img src="https://github.com/ddmm2020/HPC/blob/main/imgs/memory_struct.jpg" alt="memory_struct" style="zoom: 200%;" />
 
