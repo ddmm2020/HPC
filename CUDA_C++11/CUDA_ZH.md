@@ -16,7 +16,7 @@
 
 ![img](https://github.com/ddmm2020/HPC/blob/main/imgs/hc.png)
 
-  		主机内存(RAM)和设备显存(VRAM)是物理独分离的，通过PCIe总线进行数据传输。这就要求我们我们需要在两个平台上分别分配数据，然后管理他们之间的数据传输。
+​		主机内存(RAM)和设备显存(VRAM)是物理独分离的，通过PCIe总线进行数据传输。这就要求我们我们需要在两个平台上分别分配数据，然后管理他们之间的数据传输。
 
 ![内存](https://github.com/ddmm2020/HPC/blob/main/imgs/meory.png)
 
