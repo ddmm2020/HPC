@@ -220,7 +220,8 @@ void compute_mean_kernel(
 ### Memory Access Method
 
 Image centralization(Subtract the mean vector of the data from each image vector) :
- 														{\overline{v}_{j}^{(i)}} = {v_{j}^{(i)} - u_{j}}
+
+ 														\bar{v}_{j}^{(i)}=v_{j}^{(i)}-u_{j}
 
 Thinking from different data access methods, we have two parallel methods for centralized processing of images.
 
