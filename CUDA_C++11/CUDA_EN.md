@@ -2,7 +2,7 @@
 
 #### Related Materials
 
-Bertil Schmidt <<Parallel Programming: Concepts and Practice>> 
+Bertil Schmidt 《Parallel Programming: Concepts and Practice》 
 
  https://zhuanlan.zhihu.com/p/34587739
 
@@ -15,13 +15,13 @@ https://github.com/JGU-HPC/parallelprogrammingbook
 
  		In GPU, there are a large number of stream processors, which can start many threads at the same time, which is especially suitable for data-parallel computing-intensive tasks. The CPU has fewer computing cores, but it can implement complex logic operations and is suitable for control-intensive tasks.
 
-![img](..\imgs\hc.png)
+![img](https://github.com/ddmm2020/HPC/blob/main/imgs/hc.png)
 
   		
 
 ​		Host memory (RAM) and device video memory (VRAM) are physically separate, and data transmission is carried out through the PCIe bus. This requires us to allocate data on the two platforms separately, and then manage the data transmission between them.
 
-![内存](..\imgs\meory.png)
+![内存](https://github.com/ddmm2020/HPC/blob/main/imgs/meory.png)
 
 ​		
 
@@ -62,7 +62,7 @@ kernel_fun<<< grid, block >>>(prams...);
 
 ​		This part of the code defines a grid that contains $3\times2$ thread blocks, and each thread block contains $5\times3$ threads. The hierarchical relationship is shown in the figure below.
 
-![img](..\imgs\device_struct.png)
+![img](https://github.com/ddmm2020/HPC/blob/main/imgs/device_struct.png)
 
 
 
@@ -258,7 +258,7 @@ void correction_kernel(
 
 result：
 
-![image-20210419213817248](..\imgs\method1.png)
+![image-20210419213817248](https://github.com/ddmm2020/HPC/blob/main/imgs/method1.png)
 
 
 
@@ -286,7 +286,7 @@ void correction_kernel_ortho(
 
 result：
 
-![image-20210419213703340](..\imgs\method2.png)
+![image-20210419213703340](https://github.com/ddmm2020/HPC/blob/main/imgs/method2.png)
 
 ​     According to previous experience, under normal circumstances, the local thread identifier `threadIdx.x` changes faster than `threadIdx.y` and `threadIdx.z`. Therefore, variables that depend on` threadIdx.x should` always be the least significant bit in the operation index scheme.
 
@@ -320,7 +320,7 @@ Data[threadIdx.x*matrix_width + threadIdx.y] = value;
 
 ​        Each thread in the kernel function has its own private local memory. Each thread block has its own shared memory and is visible to all threads in the same thread block. All threads can access global memory. All threads can access the read-only memory space by: constant memory space and texture memory. **Texture memory** provides different addressing modes and filtering modes for various data layouts.
 
-<img src="D:/HPC/remote/imgs/memory_struct.jpg" alt="memory_struct" style="zoom: 200%;" />
+<img src="https://github.com/ddmm2020/HPC/blob/main/imgs/memory_struct.jpg" alt="memory_struct" style="zoom: 200%;" />
 
 
 
